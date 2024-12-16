@@ -1,24 +1,54 @@
-import java.io.IOException;
-import java.util.HashMap;
 import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Collections;
 
 public class Main {
+  public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    double n1, n2, n3;
 
-    public static void main(String[] args) throws IOException {
+   
+    n3 = sc.nextDouble();
+    n2 = sc.nextDouble();
+    n1 = sc.nextDouble();
+    
+    
+    List<Double> lista = new ArrayList<>();
+    lista.add(n1);
+    lista.add(n2);
+    lista.add(n3);
+    
+    Collections.sort(lista);
 
-       HashMap<Integer, String> map = new HashMap<>();
-       map.put(61, "Brasilia");
-       map.put(71, "Salvador");
-       map.put(11, "Sao Paulo");
-       map.put(21, "Rio de Janeiro");
-       map.put(31, "Juiz de Fora");
-       map.put(69, "Campinas");
-       map.put(27, "Vitoria");
-       map.put(31, "Belo Horizonte");
-       Scanner sc = new Scanner(System.in);
-       Integer val = sc.nextInt();
-       System.out.println(map.get(val));
-
+   
+    n1 = lista.get(2);
+    n2 = lista.get(1);
+    n3 = lista.get(0);
+    
+   
+    if (!(n1 >= n2 + n3)) {
+      
+     
+      if ((n1 * n1) == (n2 * n2) + (n3 * n3)) {
+        System.out.println("TRIANGULO RETANGULO");
+      } else if ((n1 * n1) > (n2 * n2) + (n3 * n3)) {
+        System.out.println("TRIANGULO OBTUSANGULO");
+      } else {
+        System.out.println("TRIANGULO ACUTANGULO");
+      }
+      
+      
+      if (n1 == n2 && n2 == n3) {
+        System.out.println("TRIANGULO EQUILATERO");
+      } else if (n1 == n2 || n2 == n3 || n1 == n3) {
+        System.out.println("TRIANGULO ISOSCELES");
+      }
+      
+    } else {
+      System.out.println("NAO FORMA TRIANGULO");
     }
-
+    
+    sc.close();
+  }
 }
