@@ -1,6 +1,5 @@
-import java.io.IOException;
-import java.util.Scanner;
 import java.text.DecimalFormat;
+import java.util.Scanner;
 
 class Main {  
   public static void main(String[] args) {
