@@ -8,5 +8,6 @@ class Main {
     double n = 3.14159;
     double raio = sc.nextDouble();
     System.out.printf("A = %.4f\n", Math.pow(raio, 2) * n);
+    sc.close();
   }
 }
